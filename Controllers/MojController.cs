@@ -28,11 +28,11 @@ namespace PUAP20222_vjezba.Controllers
             ViewBag.Broj = broj;
             return View();
         }
-        public ActionResult student(string ime, string prezime, int godina)
+        public ActionResult student()
         {
-            ViewBag.Ime = ime;
-            ViewBag.Prezime = prezime;
-            ViewBag.GodinaRodenja = godina;
+            ViewBag.Ime = "Ana";
+            ViewBag.Prezime = "Anic";
+            ViewBag.GodinaRodenja = 1998;
             return View();
         }
 
