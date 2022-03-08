@@ -36,5 +36,10 @@ namespace PUAP20222_vjezba.Controllers
             return View();
         }
 
+        public string vratiVrijeme()
+        {
+            return DateTime.Now.ToString();
+        }
+
     }
 }
