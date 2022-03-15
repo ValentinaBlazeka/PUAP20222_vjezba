@@ -1,0 +1,35 @@
+﻿@using PUAP20222_vjezba.Models
+@model StudentDBcs
+@{
+    ViewBag.Title = "Popis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2>Popis</h2>
+
+<table border="1">
+    <tr>
+        <th>Id </th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Oib</th>
+        <th>RedovanStudent</th>
+        <th>Detalji</th>
+    </tr>
+    @foreach (var Student in Model.VratiListu())
+    {
+
+        <tr>
+            <th>@Student.Id </th>
+            <th>@Student.Ime</th>
+            <th>@Student.Prezime</th>
+            <th>@Student.Oib</th>
+            <th>@Html.CheckBox("chbRedovan",Student.RedovanStudent)</th>
+            <th>@Html.ActionLink("Info","Detalji",new { id = Student.Id })</th>
+        </tr>
+
+    }
+</table>
